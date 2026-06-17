@@ -516,6 +516,125 @@ footer .f-back {
 .proj-card:not(.featured) .proj-info { padding:1.8rem 2rem; gap:.7rem; }
 .proj-card:not(.featured) .proj-title { font-size:1.6rem; }
 
+/* ── MOBILE ──────────────────────────────────────────────────────
+   Apenas media queries — nada do HTML original foi alterado.
+   Breakpoints: 768px (tablet) e 480px (phone)
+────────────────────────────────────────────────────────────────── */
+@media (max-width: 768px) {
+
+  /* Cursor customizado não faz sentido em touch */
+  body { cursor: auto; }
+  #cur, #cur-ring { display: none; }
+
+  /* NAV */
+  nav { padding: 0 1.5rem; height: 60px; }
+  nav ul { display: none; }
+  .nav-cta { display: none; }
+  .nav-logo .name { font-size: 1.1rem; }
+  .nav-logo .role { font-size: .45rem; letter-spacing: .3em; }
+
+  /* HERO */
+  .hero-content {
+    padding: 2rem 1.5rem 2rem;
+    max-width: 100%;
+    margin-top: 60px;
+  }
+  h1.hero-name { font-size: clamp(52px, 14vw, 80px); }
+  .hero-title-jp { font-size: 10px; letter-spacing: .3em; }
+  .hero-tagline { font-size: 15px; margin-bottom: 2rem; }
+  .hero-chips { gap: .5rem; margin-bottom: 2rem; }
+  .hero-ctas { flex-direction: column; align-items: flex-start; gap: 1rem; }
+  .btn-p { padding: .85rem 2rem; font-size: .65rem; }
+  .hero-scroll-line { display: none; }
+
+  /* MARQUEE — apenas reduz fonte */
+  .mw { font-size: .8rem; letter-spacing: .2em; }
+
+  /* ABOUT */
+  .about {
+    padding: 5rem 1.5rem;
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+  .about-avatar { max-width: 260px; margin: 0 auto; }
+  .about-corner { font-size: 3.5rem; }
+  .about-meta { grid-template-columns: 1fr; }
+
+  /* SKILLS */
+  .skills { padding: 5rem 1.5rem; }
+  .skills-grid { grid-template-columns: 1fr; }
+
+  /* EDUCATION */
+  .education { padding: 5rem 1.5rem; }
+
+  /* EXPERIENCE */
+  .experience { padding: 5rem 1.5rem; }
+  .exp-grid { grid-template-columns: 1fr; }
+  .exp-card { padding: 2rem 1.5rem; }
+  .exp-number { font-size: 4rem; }
+
+  /* CERTS */
+  .certs { padding: 5rem 1.5rem; }
+  .certs-grid { grid-template-columns: 1fr 1fr; }
+
+  /* LANGUAGES */
+  .lang-strip {
+    padding: 3rem 1.5rem;
+    grid-template-columns: 1fr;
+  }
+  .lang-item { padding: 1.8rem 1.5rem; }
+
+  /* CONTACT */
+  .contact {
+    padding: 5rem 1.5rem;
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+  .contact-right { padding: 2rem 1.5rem; }
+  .contact-left h2 { font-size: clamp(42px, 11vw, 72px); }
+
+  /* PROJETOS */
+  .projects { padding: 5rem 1.5rem; }
+  .proj-grid { grid-template-columns: 1fr; }
+  .proj-card.featured { grid-template-columns: 1fr; }
+  .proj-card.featured .proj-screens { min-height: 220px; }
+  .proj-info { padding: 1.8rem 1.5rem; }
+  .proj-mosaic { grid-template-columns: 1fr 1fr; grid-template-rows: auto; }
+  .proj-mosaic .mos-main { grid-row: auto; }
+
+  /* DIVIDER */
+  .divider { margin: 0 1.5rem; }
+
+  /* FOOTER */
+  footer {
+    padding: 2.5rem 1.5rem;
+    flex-direction: column;
+    gap: 1rem;
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+
+  /* HERO */
+  .hero-content { padding: 1.5rem 1.25rem 1.5rem; }
+  h1.hero-name { font-size: clamp(48px, 16vw, 64px); }
+  .hero-chips .chip { font-size: .5rem; padding: .35rem .7rem; }
+
+  /* CERTS — empilha tudo */
+  .certs-grid { grid-template-columns: 1fr; }
+
+  /* CONTACT form */
+  .contact-right { padding: 1.5rem 1.25rem; }
+
+  /* SECTION headings */
+  h2.section-h { font-size: clamp(36px, 11vw, 54px); }
+
+  /* PROJETOS */
+  .proj-mosaic { grid-template-columns: 1fr; }
+  .proj-mosaic .mos-side:last-child { display: none; }
+  .proj-card.featured .proj-screens { min-height: 180px; }
+}
 </style>
 </head>
 <body>
